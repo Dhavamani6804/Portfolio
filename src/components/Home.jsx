@@ -15,7 +15,7 @@ const Home = () => {
                 <Link to='portfolio' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                     Portfolio
                     <span className='group-hover:rotate-90 duration-300'>
-                    <MdOutlineKeyboardArrowRight size={20} className='ml-1'/>
+                    <div size={20} className='ml-1 animate-bounce'>➡️</div>
                     </span>
                 </Link>
             </div>

@@ -41,17 +41,17 @@ const Portfolio = () => {
           {portfolios.map(({ id, src,codeLink }) => (
             <div
               key={id}
-              className="shadow-lg shadow-cyan-700/30 rounded-lg bg-gray-900 hover:scale-105 duration-300"
-            >
+className="shadow-lg shadow-cyan-700/30 rounded-lg bg-gray-900 hover:scale-105 hover:shadow-cyan-500/50 duration-500 transition-all ease-in-out"            >
               <div className="aspect-video overflow-hidden rounded-t-lg">
   <img src={src} alt={`Project ${id}`} className="w-full h-full object-cover" />
 </div>
 
               <div className="flex items-center justify-center">
                 <a href={codeLink} target="_blank" rel="noreferrer"/>
-                <button className="w-full px-6 py-3 m-4 duration-300 hover:scale-105 font-semibold text-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg">
-                  Link
-                </button>
+                <button className="w-full px-6 py-3 m-4 font-semibold text-cyan-400 bg-transparent border border-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-cyan-500/40">
+  View Code
+</button>
+
               </div>
             </div>
           ))}
