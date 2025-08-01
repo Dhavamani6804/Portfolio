@@ -3,8 +3,6 @@ import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import chat from "../assets/portfolio/chat.jpeg";
 import port from "../assets/portfolio/portfolioimg.jpeg";
 
-// ... existing code ...
-
 const Portfolio = () => {
   const portfolios = [
     {
