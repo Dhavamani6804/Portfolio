@@ -25,7 +25,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black via-gray-900 to-gray-800 w-full text-white md:h-screen pt-20"
+      className="scroll-mt-24 bg-gradient-to-b from-black via-gray-900 to-gray-800 w-full text-white md:h-screen pt-20"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -43,11 +43,10 @@ const Portfolio = () => {
               key={id}
               className="shadow-lg shadow-cyan-700/30 rounded-lg bg-gray-900 hover:scale-105 duration-300"
             >
-              <img
-                src={src}
-                alt=""
-                className="rounded-t-lg w-full h-48 object-cover"
-              />
+              <div className="aspect-video overflow-hidden rounded-t-lg">
+  <img src={src} alt={`Project ${id}`} className="w-full h-full object-cover" />
+</div>
+
               <div className="flex items-center justify-center">
                 <a href={codeLink} target="_blank" rel="noreferrer"/>
                 <button className="w-full px-6 py-3 m-4 duration-300 hover:scale-105 font-semibold text-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg">

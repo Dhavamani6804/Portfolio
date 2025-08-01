@@ -2,17 +2,20 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name="about" className='w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white'>
+    <div name="about" className=' w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white scroll-mt-24'>
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-      <div className='pb-8'>
+      <div className='mt-40 pb-8'>
         <p className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
       </div>
 
-      <p className='text-xl mt-20'>Hi, I'm a passionate and driven full-stack developer with a keen interest in building real-time applications and responsive web designs. I specialize in JavaScript and frameworks like React, and I’m currently exploring the MERN stack to enhance my expertise.</p>
-     <br />
-      <p className='text-xl'>With hands-on experience in Firebase and MERN stack, I’ve worked on projects like a real-time chat application, a Python-based voice assistant, and a sentiment analysis web application. My commitment to learning new technologies and solving complex problems has helped me contribute meaningfully to every project I’ve undertaken.</p>
-      <br />
-      <p className='text-xl'>Apart from coding, I’ve also participated in events like a 7-day NSS camp, showcasing my teamwork and organizational skills. Whether it's optimizing web applications or creating intuitive user interfaces, I love turning ideas into reality.</p>
+      <p className="mt-5 text-xl leading-relaxed tracking-wide text-justify">
+I'm Dhavamani S, a passionate and results-driven Full-Stack Developer with strong proficiency in the MERN stack, Java, and core data structures. I specialize in building scalable, secure, and user-friendly web applications, combining a clean UI with solid backend logic.</p>     <br />
+      <p className="text-xl leading-relaxed tracking-wide text-justify">
+ I’ve engineered a robust Railway Ticket Reservation System that intelligently handles real-world scenarios like RAC and waiting lists. I’ve also developed ConnectAll, a secure real-time chat platform enabling seamless communication, and a modern portfolio website showcasing my work.</p>      <br />
+      <p className="text-xl leading-relaxed tracking-wide text-justify">
+I take pride in writing clean code, following software engineering principles, and continuously learning new technologies. Outside of tech, I’ve demonstrated leadership through my role as the Chief Advisor in NSS, guiding 60+ volunteers in social impact projects.</p><br/>
+      <p className="text-xl leading-relaxed tracking-wide text-justify">
+        When I’m not coding, you’ll find me exploring open-source projects or improving my skills through certifications and community engagement.</p>
       </div>
     </div>
   )
