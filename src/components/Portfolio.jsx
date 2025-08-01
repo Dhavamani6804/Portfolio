@@ -8,14 +8,17 @@ const Portfolio = () => {
     {
       id: 1,
       src: reactWeather,
+      codeLink:"https://github.com/Dhavamani6804/weather-app.git"
     },
     {
       id: 2,
       src: port,
+      codeLink:"https://github.com/Dhavamani6804/Portfolio.git"
     },
     {
       id: 3,
       src: chat,
+      codeLink:"https://github.com/Dhavamani6804/ConnectAll.git"
     },
   ];
 
@@ -35,7 +38,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src,codeLink }) => (
             <div
               key={id}
               className="shadow-lg shadow-cyan-700/30 rounded-lg bg-gray-900 hover:scale-105 duration-300"
@@ -46,11 +49,9 @@ const Portfolio = () => {
                 className="rounded-t-lg w-full h-48 object-cover"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-300 hover:scale-105 font-semibold text-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg">
-                  Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-300 hover:scale-105 font-semibold text-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg">
-                  Code
+                <a href={codeLink} target="_blank" rel="noreferrer"/>
+                <button className="w-full px-6 py-3 m-4 duration-300 hover:scale-105 font-semibold text-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg">
+                  Link
                 </button>
               </div>
             </div>
