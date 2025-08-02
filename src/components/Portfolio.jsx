@@ -2,26 +2,48 @@ import React from "react";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import chat from "../assets/portfolio/chat.jpeg";
 import port from "../assets/portfolio/portfolioimg.jpeg";
-import railway from '../assets/projects/railway.png';
-import blog from '../assets/projects/blog.png';
-import sanitizer from '../assets/projects/sanitizer.png';
+import railway from "../assets/portfolio/railway.png";
+import blog from "../assets/portfolio/blog.png";
+import sanitizer from "../assets/portfolio/sanitizer.png";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: reactWeather,
-      codeLink: "https://github.com/Dhavamani6804/weather-app.git",
+      src: port,
+      title: "Portfolio Website",
+      github: "https://github.com/Dhavamani6804/Portfolio.git",
     },
     {
       id: 2,
-      src: port,
-      codeLink: "https://github.com/Dhavamani6804/Portfolio.git",
+      src: chat,
+      title: "ConnectAll Chat App",
+      github: "https://github.com/Dhavamani6804/ConnectAll.git",
     },
     {
       id: 3,
-      src: chat,
-      codeLink: "https://github.com/Dhavamani6804/ConnectAll.git",
+      src: sanitizer,
+      title: "Password Sanitizer (Java)",
+      github: "https://github.com/Dhavamani6804/Password_sanitizer.git",
+    },
+    {
+      id: 4,
+      src: railway,
+      title: "Railway Ticket Reservation (Java)",
+      github:
+        "https://github.com/Dhavamani6804/railway_ticket_reservation_system_.git",
+    },
+    {
+      id: 5,
+      src: blog,
+      title: "Personal Blog Platform",
+      github: "https://github.com/Dhavamani6804/Dhava-s-blog.git",
+    },
+    {
+      id: 6,
+      src: reactWeather,
+      title: "Weather App",
+      github: "https://github.com/Dhavamani6804/weather-app.git",
     },
   ];
 
@@ -41,7 +63,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, codeLink }) => (
+          {portfolios.map(({ id, src, github }) => (
             <div
               key={id}
               className="shadow-lg shadow-cyan-700/30 rounded-lg bg-gray-900 hover:scale-105 hover:shadow-cyan-500/50 duration-500 transition-all ease-in-out"
@@ -55,10 +77,11 @@ const Portfolio = () => {
               </div>
 
               <div className="flex items-center justify-center">
-                <a href={codeLink} target="_blank" rel="noreferrer" />
-                <button className="w-full px-6 py-3 m-4 font-semibold text-cyan-400 bg-transparent border border-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-cyan-500/40">
-                  View Code
-                </button>
+                <a href={github} target="_blank" rel="noreferrer">
+                  <button className="w-full px-6 py-3 m-4 font-semibold text-cyan-400 bg-transparent border border-cyan-500 hover:text-white hover:bg-cyan-700 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-cyan-500/40">
+                    View Code
+                  </button>
+                </a>
               </div>
             </div>
           ))}
