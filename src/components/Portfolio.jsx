@@ -2,6 +2,9 @@ import React from "react";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import chat from "../assets/portfolio/chat.jpeg";
 import port from "../assets/portfolio/portfolioimg.jpeg";
+import railway from '../assets/projects/railway.png';
+import blog from '../assets/projects/blog.png';
+import sanitizer from '../assets/projects/sanitizer.png';
 
 const Portfolio = () => {
   const portfolios = [
