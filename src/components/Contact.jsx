@@ -2,11 +2,23 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
-const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  message: "",
-});
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://getform.io/f/bnllyomb", {
+      method: "POST",
+      body: new FormData(e.target),
+    }).then(() => {
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    });
+  };
+
   return (
     <div
       name="contact"
@@ -19,20 +31,10 @@ const [formData, setFormData] = useState({
           </p>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
+
         <div className="flex justify-center items-center">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              const form = e.target;
-
-              fetch("https://getform.io/f/bnllyomb", {
-                method: "POST",
-                body: new FormData(form),
-              }).then(() => {
-                setSubmitted(true);
-                setFormData({ name: "", email: "", message: "" });
-              });
-            }}
+            onSubmit={handleSubmit}
             className="flex flex-col w-full md:w-1/2"
           >
             <input
@@ -76,12 +78,13 @@ const [formData, setFormData] = useState({
               KIT...!
             </button>
           </form>
-          {submitted && (
-            <p className="text-green-500 mt-4">
-              Thank you for your message! I'll get back to you soon.
-            </p>
-          )}
         </div>
+
+        {submitted && (
+          <p className="text-cyan-400 text-center mt-4 text-lg">
+            Thank you for your message! I'll get back to you soon.
+          </p>
+        )}
       </div>
     </div>
   );
