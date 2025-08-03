@@ -49,15 +49,16 @@ const Skills = () => {
   ]
 
   const languageSkills = [
-    { id: 10, src: python, title: 'Python', style: 'shadow-yellow-300' },
+    { id: 10, src: java, title: 'Java', style: 'shadow-red-500' },
     { id: 11, src: c, title: 'C', style: 'shadow-gray-500' },
-    { id: 12, src: java, title: 'Java', style: 'shadow-red-500' },
+    { id: 12, src: python, title: 'Python', style: 'shadow-yellow-300' },
+
   ]
 
   const tools = [
-    { id: 13, src: git, title: 'GitHub', style: 'shadow-gray-400' },
-    { id: 14, src: vscode, title: 'VS Code', style: 'shadow-blue-500' },
-    { id: 15, src: intellij, title: 'IntelliJ IDEA', style: 'shadow-pink-400' },
+    { id: 13, src: vscode, title: 'VS Code', style: 'shadow-blue-500' },
+    { id: 14, src: intellij, title: 'IntelliJ IDEA', style: 'shadow-pink-400' },
+    { id: 15, src: git, title: 'GitHub', style: 'shadow-gray-400' },
     { id: 16, src: canva, title: 'Canva', style: 'shadow-cyan-300' },
   ]
 
