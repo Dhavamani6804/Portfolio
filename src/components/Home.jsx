@@ -1,6 +1,5 @@
 import React from "react";
 import mine from "../assets/mine.png";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
 const Home = () => {
