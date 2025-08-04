@@ -29,7 +29,7 @@ const Home = () => {
               <div size={20} className="ml-1 animate-bounce">
                 👉
               </div>
-               KIT
+               Connect with me
               <span className="group-hover:rotate-45 duration-300">
                 <div size={20} className="ml-1 animate-bounce">
                   👈
