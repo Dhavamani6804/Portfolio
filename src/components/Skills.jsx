@@ -1,32 +1,14 @@
-import html from '../assets/skills/html5-original.svg'
-import css from '../assets/skills/css3-original.svg'
-import javascript from '../assets/skills/javascript-original.svg'
-import reactImage from '../assets/skills/react-original.svg'
-import tailwind from '../assets/skills/tailwindcss-original.svg'
-import node from '../assets/skills/nodejs-original.svg'
-import express from '../assets/skills/express-original.svg'
-import mongo from '../assets/skills/mongodb-original.svg'
-import mysql from '../assets/skills/mysql-original.svg'
-import python from '../assets/skills/python-original.svg'
-import c from '../assets/skills/c-original.svg'
-import java from '../assets/skills/java-original.svg'
-import git from '../assets/skills/github-original.svg'
-import vscode from '../assets/skills/vscode-original.svg'
-import canva from '../assets/skills/canva-original.svg'
-import intellij from '../assets/skills/intellij-original.svg'
-
 const SkillSection = ({ title, skills }) => (
   <div className='mb-10'>
-    <h3 className='text-2xl font-semibold mb-4 border-b-2 border-gray-500 inline-block'>{title}</h3>
-    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 text-center'>
-      {skills.map(({ id, src, title, style }) => (
-        <div
+    <h3 className='mb-4 inline-block border-b-2 border-gray-500 text-2xl font-semibold'>{title}</h3>
+    <div className='flex flex-wrap gap-3'>
+      {skills.map(({ id, title, style }) => (
+        <span
           key={id}
-          className={`flex flex-col items-center justify-center rounded-xl border border-gray-700 bg-gray-900/80 px-3 py-4 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 ${style}`}
+          className={`rounded-full border border-gray-600 bg-gray-900 px-3 py-2 text-sm shadow-md transition-transform duration-300 hover:-translate-y-1 hover:scale-105 ${style}`}
         >
-          <img src={src} alt={title} className='h-14 w-14 sm:h-16 sm:w-16 object-contain' />
-          <p className='mt-3 text-sm font-medium text-gray-200'>{title}</p>
-        </div>
+          {title}
+        </span>
       ))}
     </div>
   </div>
@@ -34,31 +16,31 @@ const SkillSection = ({ title, skills }) => (
 
 const Skills = () => {
   const frontendSkills = [
-    { id: 1, src: html, title: 'HTML5', style: 'shadow-orange-500' },
-    { id: 2, src: css, title: 'CSS3', style: 'shadow-blue-500' },
-    { id: 3, src: javascript, title: 'JavaScript', style: 'shadow-yellow-500' },
-    { id: 4, src: reactImage, title: 'ReactJS', style: 'shadow-blue-600' },
-    { id: 5, src: tailwind, title: 'TailwindCSS', style: 'shadow-sky-400' },
+    { id: 1, title: 'HTML5', style: 'shadow-orange-500' },
+    { id: 2, title: 'CSS3', style: 'shadow-blue-500' },
+    { id: 3, title: 'JavaScript', style: 'shadow-yellow-500' },
+    { id: 4, title: 'ReactJS', style: 'shadow-blue-600' },
+    { id: 5, title: 'TailwindCSS', style: 'shadow-sky-400' },
   ]
 
   const backendSkills = [
-    { id: 6, src: node, title: 'Node.js', style: 'shadow-green-600' },
-    { id: 7, src: express, title: 'Express.js', style: 'shadow-gray-500' },
-    { id: 8, src: mongo, title: 'MongoDB', style: 'shadow-green-400' },
-    { id: 9, src: mysql, title: 'MySQL', style: 'shadow-blue-400' },
+    { id: 6, title: 'Node.js', style: 'shadow-green-600' },
+    { id: 7, title: 'Express.js', style: 'shadow-gray-500' },
+    { id: 8, title: 'MongoDB', style: 'shadow-green-400' },
+    { id: 9, title: 'MySQL', style: 'shadow-blue-400' },
   ]
 
   const languageSkills = [
-    { id: 10, src: java, title: 'Java', style: 'shadow-red-500' },
-    { id: 11, src: c, title: 'C', style: 'shadow-gray-500' },
-    { id: 12, src: python, title: 'Python', style: 'shadow-yellow-300' },
+    { id: 10, title: 'Java', style: 'shadow-red-500' },
+    { id: 11, title: 'C', style: 'shadow-gray-500' },
+    { id: 12, title: 'Python', style: 'shadow-yellow-300' },
   ]
 
   const tools = [
-    { id: 13, src: vscode, title: 'VS Code', style: 'shadow-blue-500' },
-    { id: 14, src: intellij, title: 'IntelliJ IDEA', style: 'shadow-pink-400' },
-    { id: 15, src: git, title: 'GitHub', style: 'shadow-gray-400' },
-    { id: 16, src: canva, title: 'Canva', style: 'shadow-cyan-300' },
+    { id: 13, title: 'VS Code', style: 'shadow-blue-500' },
+    { id: 14, title: 'IntelliJ IDEA', style: 'shadow-pink-400' },
+    { id: 15, title: 'GitHub', style: 'shadow-gray-400' },
+    { id: 16, title: 'Canva', style: 'shadow-cyan-300' },
   ]
 
   const resumeHighlights = [

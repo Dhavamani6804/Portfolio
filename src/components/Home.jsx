@@ -3,14 +3,14 @@ import mine from "../assets/mine.jpeg";
 import { Link } from "react-scroll";
 
 const Home = () => {
-  const highlights = ["MERN Stack", "Java", "Responsive UI"];
+  const highlights = ["MERN Stack", "Java"];
 
   return (
     <div
       name="home"
-      className="scroll-mt-24 min-h-screen w-full text-white bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.16),_transparent_28%),linear-gradient(to_bottom,_#000,_#0f172a_60%,_#111827)] pt-24 sm:pt-28 md:pt-0"
+      className="scroll-mt-24 min-h-screen w-full text-white bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.16),_transparent_28%),linear-gradient(to_bottom,_#000,_#0f172a_60%,_#111827)] pt-20 sm:pt-24 md:pt-8"
     >
-      <div className="mx-auto flex h-full max-w-screen-lg flex-col-reverse items-center justify-center gap-8 px-4 py-10 md:flex-row md:gap-12 md:py-0">
+      <div className="mx-auto flex h-full max-w-screen-lg flex-col-reverse items-center justify-center gap-8 px-4 py-8 md:flex-row md:gap-12 md:py-0">
         <div className="flex h-full flex-col justify-center text-center md:text-left">
           <div className="mb-4 inline-flex w-fit items-center self-center rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300 md:self-start">
             Open to opportunities
