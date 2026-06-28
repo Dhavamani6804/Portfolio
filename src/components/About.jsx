@@ -9,22 +9,22 @@ const About = () => {
         </div>
 
         <p className="mt-5 text-base sm:text-xl leading-relaxed tracking-wide text-left sm:text-justify">
-          I'm <span className="font-semibold text-white">Dhavamani S</span>, a passionate and results-driven <span className="font-semibold text-white">Full-Stack Developer</span> with strong proficiency in the <span className="text-cyan-400">MERN stack</span>, <span className="text-cyan-400">Java</span>, and core <span className="text-cyan-400">data structures</span>. I specialize in building <span className="font-semibold text-white">scalable</span>, <span className="font-semibold text-white">secure</span>, and <span className="font-semibold text-white">user-friendly web applications</span>, combining a clean UI with solid backend logic.
+          Ever since I wrote my first program, I've been fascinated by how software can solve real-world problems and make everyday tasks simpler. That curiosity has driven me to explore a wide range of technologies—from full-stack web development and real-time applications to embedded systems and computer vision.
         </p>
         <br />
 
         <p className="text-base sm:text-xl leading-relaxed tracking-wide text-left sm:text-justify">
-          I’ve engineered a <span className="font-semibold text-white">Railway Ticket Reservation System</span> that intelligently handles real-world scenarios like <span className="text-cyan-400">RAC</span> and <span className="text-cyan-400">waiting lists</span>. I’ve also developed <span className="font-semibold text-white">ConnectAll</span>, a secure <span className="text-cyan-400">real-time chat platform</span>, and a modern <span className="font-semibold text-white">portfolio website</span> showcasing my work.
+          Today, I primarily build modern, scalable applications using the <span className="text-cyan-400">MERN stack</span>, while also working with <span className="text-cyan-400">Java</span> and <span className="text-cyan-400">Python</span> to develop efficient and reliable software. Through hands-on industry training, I've gained exposure to <span className="text-cyan-400">C, C++, Linux, Git and GitHub</span>, giving me a broader understanding of software development beyond web technologies.
         </p>
         <br />
 
         <p className="text-base sm:text-xl leading-relaxed tracking-wide text-left sm:text-justify">
-          I take pride in writing <span className="font-semibold text-white">clean code</span>, following <span className="text-cyan-400">software engineering principles</span>, and continuously learning <span className="font-semibold text-white">new technologies</span>. Outside of tech, I’ve demonstrated <span className="font-semibold text-white">leadership</span> through my role as the <span className="text-cyan-400">Chief Advisor in NSS</span>, guiding <span className="font-semibold text-white">60+ volunteers</span> in social impact projects.
+          I enjoy turning ideas into practical solutions, whether it's creating a personal finance management platform, a professional networking application, or an intelligent gesture and voice-controlled desktop assistant. Every project I build is an opportunity to learn, improve, and write better software than I did yesterday.
         </p>
         <br />
 
         <p className="text-base sm:text-xl leading-relaxed tracking-wide text-left sm:text-justify">
-          When I’m not coding, you’ll find me exploring <span className="text-cyan-400">open-source projects</span> or improving my skills through <span className="font-semibold text-white">certifications</span> and <span className="text-cyan-400">community engagement</span>.
+          I'm currently looking for opportunities where I can contribute, collaborate with talented teams, and continue growing as a Software Engineer while building products that create meaningful impact.
         </p>
       </div>
     </div>

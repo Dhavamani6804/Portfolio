@@ -1,5 +1,5 @@
 import React from "react";
-import mine from "../assets/mine.png";
+import mine from "../assets/mine.jpeg";
 import { Link } from "react-scroll";
 
 const Home = () => {

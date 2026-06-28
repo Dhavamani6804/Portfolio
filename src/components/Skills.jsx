@@ -18,14 +18,14 @@ import intellij from '../assets/skills/intellij-original.svg'
 const SkillSection = ({ title, skills }) => (
   <div className='mb-10'>
     <h3 className='text-2xl font-semibold mb-4 border-b-2 border-gray-500 inline-block'>{title}</h3>
-    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center'>
+    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 text-center'>
       {skills.map(({ id, src, title, style }) => (
         <div
           key={id}
-          className={`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${style}`}
+          className={`flex flex-col items-center justify-center rounded-xl border border-gray-700 bg-gray-900/80 px-3 py-4 shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 ${style}`}
         >
-          <img src={src} alt={title} className='w-20 h-20 mx-auto' />
-          <p className='mt-4'>{title}</p>
+          <img src={src} alt={title} className='h-14 w-14 sm:h-16 sm:w-16 object-contain' />
+          <p className='mt-3 text-sm font-medium text-gray-200'>{title}</p>
         </div>
       ))}
     </div>
