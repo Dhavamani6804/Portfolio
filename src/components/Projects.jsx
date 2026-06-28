@@ -68,26 +68,38 @@ const Projects = () => {
           <p className="py-6">Check out some of my GitHub work</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-0">
+        <div className="grid grid-cols-1 gap-6 px-0 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {projects.map(({ id, title, description, tech, link }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg p-4 bg-gray-900">
-              <h3 className="text-xl font-bold mb-2">{title}</h3>
-              <p className="text-sm text-gray-400 mb-2">{description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {tech.map((item, index) => (
-                  <span key={index} className="bg-gray-700 text-xs px-2 py-1 rounded-full">
-                    {item}
+            <div
+              key={id}
+              className="group relative overflow-hidden rounded-2xl border border-gray-700 bg-gray-900/80 p-5 shadow-xl shadow-black/30 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/50"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 transition duration-300 group-hover:opacity-100" />
+              <div className="relative">
+                <div className="mb-3 flex items-center justify-between">
+                  <span className="rounded-full bg-cyan-500/10 px-2 py-1 text-[10px] uppercase tracking-[0.25em] text-cyan-300">
+                    Featured
                   </span>
-                ))}
+                  <span className="text-xs text-gray-500">GitHub</span>
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
+                <p className="mb-3 text-sm leading-relaxed text-gray-400">{description}</p>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {tech.map((item, index) => (
+                    <span key={index} className="rounded-full bg-gray-800 px-2 py-1 text-xs text-gray-300">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-cyan-400 transition group-hover:text-cyan-300"
+                >
+                  View on GitHub <span className="ml-1">→</span>
+                </a>
               </div>
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:underline"
-              >
-                View on GitHub →
-              </a>
             </div>
           ))}
         </div>

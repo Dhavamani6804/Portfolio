@@ -3,43 +3,82 @@ import mine from "../assets/mine.jpeg";
 import { Link } from "react-scroll";
 
 const Home = () => {
+  const highlights = ["MERN Stack", "Java", , "Responsive UI"];
+
   return (
     <div
       name="home"
-      className="scroll-mt-24 min-h-screen w-full text-white bg-gradient-to-b from-black via-black to-gray-800 pt-24 sm:pt-28 md:pt-0"
+      className="scroll-mt-24 min-h-screen w-full text-white bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.16),_transparent_28%),linear-gradient(to_bottom,_#000,_#0f172a_60%,_#111827)] pt-24 sm:pt-28 md:pt-0"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col-reverse justify-center items-center h-full px-4 py-10 gap-8 md:flex-row md:gap-12 md:py-0">
-        <div className="flex flex-col justify-center h-full text-center md:text-left">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
-            I'm a Full Stack Developer
+      <div className="mx-auto flex h-full max-w-screen-lg flex-col-reverse items-center justify-center gap-8 px-4 py-10 md:flex-row md:gap-12 md:py-0">
+        <div className="flex h-full flex-col justify-center text-center md:text-left">
+          <div className="mb-4 inline-flex w-fit items-center self-center rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300 md:self-start">
+            Open to opportunities
+          </div>
+          <h2 className="text-3xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
+            Software Engineer <span className="text-cyan-400">•</span> Full-Stack Developer
           </h2>
-          <p className="text-gray-400 py-4 max-w-md mx-auto md:mx-0 leading-relaxed">
-            I'm a passionate and dedicated software developer with a strong
-            foundation in JavaScript, React, and Node.js. I have a keen eye for
-            detail and strong communication skills. I can build scalable and
-            maintainable applications.
+          <p className="mx-auto max-w-2xl py-4 leading-relaxed text-gray-400 md:mx-0">
+            I build modern, scalable applications with a sharp eye for clean UI,
+            reliable architecture, and user-focused experiences.
           </p>
-          <div className="flex justify-center md:justify-start">
+
+          <div className="mb-5 flex flex-wrap justify-center gap-2 md:justify-start">
+            {highlights.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-gray-700 bg-gray-900/70 px-3 py-1 text-sm text-gray-200"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <Link
               to="contact"
               smooth
               duration={500}
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+              className="group flex w-fit items-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-white transition hover:scale-[1.02]"
             >
-              <span className="ml-1 animate-bounce">👉</span>
-              <span className="mx-1">Connect with me</span>
-              <span className="group-hover:rotate-45 duration-300">
-                <span className="ml-1 animate-bounce">👈</span>
-              </span>
+              <span className="mr-2">Let’s connect</span>
+              <span className="transition duration-300 group-hover:translate-x-1">→</span>
             </Link>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg border border-gray-600 px-6 py-3 text-gray-200 transition hover:border-cyan-400 hover:text-cyan-300"
+            >
+              View Resume
+            </a>
+          </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-gray-800 bg-gray-900/70 p-3 text-left">
+              <p className="text-xl font-semibold text-white">Full-stack</p>
+              <p className="text-sm text-gray-400">Web apps, dashboards, and APIs</p>
+            </div>
+            <div className="rounded-xl border border-gray-800 bg-gray-900/70 p-3 text-left">
+              <p className="text-xl font-semibold text-white">Problem solving</p>
+              <p className="text-sm text-gray-400">Focused on practical, real-world solutions</p>
+            </div>
+            <div className="rounded-xl border border-gray-800 bg-gray-900/70 p-3 text-left">
+              <p className="text-xl font-semibold text-white">Growth mindset</p>
+              <p className="text-sm text-gray-400">Always learning and improving</p>
+            </div>
           </div>
         </div>
+
         <div className="w-full max-w-sm md:max-w-none">
-          <img
-            src={mine}
-            alt="my profile"
-            className="rounded-2xl mx-auto w-full h-auto object-cover"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 -z-10 rounded-[2rem] bg-cyan-500/20 blur-3xl" />
+            <img
+              src={mine}
+              alt="my profile"
+              className="mx-auto h-auto w-full rounded-[2rem] border border-cyan-400/20 object-cover shadow-[0_0_40px_rgba(34,211,238,0.16)]"
+            />
+          </div>
         </div>
       </div>
     </div>
