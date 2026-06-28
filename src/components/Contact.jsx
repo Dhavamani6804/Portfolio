@@ -22,67 +22,78 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="scroll-mt-24 bg-gradient-to-b from-black to-gray-800 w-full text-white py-16 sm:py-20"
+      className="scroll-mt-24 w-full bg-gradient-to-b from-black to-gray-800 py-16 text-white sm:py-20"
     >
-      <div className="flex flex-col justify-center px-4 sm:px-6 max-w-screen-lg mx-auto h-full">
+      <div className="mx-auto flex h-full max-w-screen-lg flex-col justify-center px-4 sm:px-6">
         <div className="pb-8">
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+          <p className="inline border-b-4 border-gray-500 p-2 text-4xl font-bold">
             Contact
           </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
+          <p className="py-6 text-gray-300">
+            Let’s build something meaningful together. Feel free to reach out for opportunities, collaborations, or just to say hello.
+          </p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-2xl border border-cyan-400/20 bg-gray-900/70 p-6 shadow-xl shadow-black/30">
+            <h3 className="mb-4 text-xl font-semibold text-cyan-300">Quick connect</h3>
+            <div className="space-y-3 text-sm text-gray-300">
+              <p>Open to internships, freelance projects, and full-time opportunities.</p>
+              <p>Response time is usually within 1–2 business days.</p>
+              <p>Prefer email or LinkedIn for professional conversations.</p>
+            </div>
+          </div>
+
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col w-full sm:w-3/4 md:w-1/2"
+            className="flex flex-col rounded-2xl border border-gray-700 bg-gray-900/70 p-6 shadow-xl shadow-black/30"
           >
             <input
               type="text"
               name="name"
               required
-              placeholder="Enter your name"
+              placeholder="Your name"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="rounded-lg border border-gray-600 bg-transparent p-3 text-white placeholder-gray-400 outline-none focus:border-cyan-400"
             />
             <input
               type="email"
               name="email"
               required
-              placeholder="Enter your email"
+              placeholder="Your email"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="p-2 my-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="my-4 rounded-lg border border-gray-600 bg-transparent p-3 text-white placeholder-gray-400 outline-none focus:border-cyan-400"
             />
             <textarea
               name="message"
-              rows="10"
+              rows="8"
               required
-              placeholder="Enter your message"
+              placeholder="Tell me about your idea or opportunity"
               value={formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="rounded-lg border border-gray-600 bg-transparent p-3 text-white placeholder-gray-400 outline-none focus:border-cyan-400"
             ></textarea>
 
             <button
               type="submit"
-              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              className="mx-auto mt-6 flex items-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-white transition duration-300 hover:scale-[1.02]"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
 
         {submitted && (
-          <p className="text-cyan-400 text-center mt-4 text-lg">
-            Thank you for your message! I'll get back to you soon.
+          <p className="mt-6 text-center text-lg text-cyan-400">
+            Thank you for your message! I’ll get back to you soon.
           </p>
         )}
       </div>
