@@ -25,14 +25,16 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed w-full h-20 px-4 z-50 flex justify-between items-center transition-all duration-300 ${
+      className={`fixed w-full h-16 sm:h-20 px-3 sm:px-4 z-50 flex justify-between items-center transition-all duration-300 ${
         scrolled
           ? "bg-black/10 backdrop-blur-md shadow-md"
           : "bg-black"
       } text-white`}
     >
       <div>
-        <h1 className="text-4xl font-signature ml-2">Dhavamani</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-signature ml-1 sm:ml-2">
+          Dhavamani
+        </h1>
       </div>
 
       <ul className="hidden md:flex">
@@ -60,7 +62,7 @@ const NavBar = () => {
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="py-6 text-4xl capitalize cursor-pointer"
+              className="py-6 text-2xl sm:text-3xl capitalize cursor-pointer"
             >
               <Link
                 onClick={() => setNav(false)}

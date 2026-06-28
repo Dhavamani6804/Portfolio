@@ -22,9 +22,9 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="scroll-mt-24 bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className="scroll-mt-24 bg-gradient-to-b from-black to-gray-800 w-full text-white py-16 sm:py-20"
     >
-      <div className="flex flex-col justify-center p-4 max-w-screen-lg mx-auto h-full">
+      <div className="flex flex-col justify-center px-4 sm:px-6 max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Contact
@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col w-full md:w-1/2"
+            className="flex flex-col w-full sm:w-3/4 md:w-1/2"
           >
             <input
               type="text"
@@ -75,7 +75,8 @@ const Contact = () => {
               type="submit"
               className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
             >
-Send            </button>
+              Send
+            </button>
           </form>
         </div>
 
