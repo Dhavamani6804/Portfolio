@@ -3,7 +3,7 @@ import mine from "../assets/mine.jpeg";
 import { Link } from "react-scroll";
 
 const Home = () => {
-  const highlights = ["MERN Stack", "Java", , "Responsive UI"];
+  const highlights = ["MERN Stack", "Java", "Responsive UI"];
 
   return (
     <div
