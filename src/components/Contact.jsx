@@ -38,7 +38,7 @@ const Contact = () => {
           <div className="rounded-2xl border border-cyan-400/20 bg-gray-900/70 p-6 shadow-xl shadow-black/30">
             <h3 className="mb-4 text-xl font-semibold text-cyan-300">Quick connect</h3>
             <div className="space-y-3 text-sm text-gray-300">
-              <p>Open to internships, freelance projects, and full-time opportunities.</p>
+              <p>Open to internships and full-time opportunities.</p>
               <p>Response time is usually within 1–2 business days.</p>
               <p>Prefer email or LinkedIn for professional conversations.</p>
             </div>
